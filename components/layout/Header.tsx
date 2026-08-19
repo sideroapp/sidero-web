@@ -38,7 +38,7 @@ export function Header() {
           </Link>
         </motion.div>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -50,7 +50,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button href="#contato" size="sm">
             Solicitar demonstração
           </Button>
@@ -58,7 +58,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-navy-900 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-navy-900 lg:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
@@ -73,7 +73,7 @@ export function Header() {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.2 }}
-          className="border-t border-slate-200 bg-white md:hidden"
+          className="border-t border-slate-200 bg-white lg:hidden"
           aria-label="Navegação móvel"
         >
           <Container className="flex flex-col gap-1 py-4">
