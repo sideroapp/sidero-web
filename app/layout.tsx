@@ -10,11 +10,41 @@ const inter = Inter({
   display: 'swap',
 });
 
+const title = 'SIDERO — ERP Industrial';
+const description =
+  'SIDERO é o ERP para o setor siderúrgico e metalúrgico: da cotação de bobinas ao financeiro, em um só lugar.';
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://sidero.app.br'),
-  title: 'SIDERO — ERP Industrial',
-  description:
-    'SIDERO é o ERP para o setor siderúrgico e metalúrgico: da cotação de bobinas ao financeiro, em um só lugar.',
+  title: {
+    default: title,
+    template: '%s | SIDERO',
+  },
+  description,
+  keywords: [
+    'ERP industrial',
+    'ERP siderúrgico',
+    'ERP metalúrgico',
+    'gestão de bobinas',
+    'gestão de estoque industrial',
+    'sistema para siderúrgicas',
+  ],
+  authors: [{ name: 'SIDERO' }],
+  robots: { index: true, follow: true },
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://sidero.app.br',
+    siteName: 'SIDERO',
+    title,
+    description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
