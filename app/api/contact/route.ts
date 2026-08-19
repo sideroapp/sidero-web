@@ -11,10 +11,10 @@ export async function POST(request: Request) {
   }
 
   try {
-    const data = contactFormSchema.parse(body);
+    contactFormSchema.parse(body);
 
     // TODO: integrar com serviço de e-mail/CRM quando definido (fora do escopo da Fase 1).
-    console.info('[contact] novo lead recebido', { email: data.email, company: data.company });
+    console.info('[contact] novo lead recebido');
 
     return NextResponse.json({ message: 'Mensagem recebida com sucesso.' }, { status: 200 });
   } catch (error) {
