@@ -3,27 +3,22 @@
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 export function HeroSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <section className="relative overflow-hidden bg-white">
-      {!prefersReducedMotion && (
-        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-          <motion.div
-            className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-navy-100 blur-3xl"
-            animate={{ x: [0, 24, 0], y: [0, 16, 0] }}
-            transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          <motion.div
-            className="absolute -right-24 top-1/3 h-80 w-80 rounded-full bg-steel-200 blur-3xl"
-            animate={{ x: [0, -20, 0], y: [0, 24, 0] }}
-            transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          />
-        </div>
-      )}
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <motion.div
+          className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-navy-100 blur-3xl"
+          animate={{ x: [0, 24, 0], y: [0, 16, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute -right-24 top-1/3 h-80 w-80 rounded-full bg-steel-200 blur-3xl"
+          animate={{ x: [0, -20, 0], y: [0, 24, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </div>
 
       <Container className="grid grid-cols-1 items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
         <div>
