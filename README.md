@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SIDERO Web
 
-## Getting Started
+Website institucional do [SIDERO](https://sidero.app.br) — ERP industrial para o setor
+siderúrgico e metalúrgico.
 
-First, run the development server:
+> Este repositório é o site de marketing/institucional, separado do produto SIDERO ERP
+> (que vive em `sidero-erp`, stack Flutter + .NET). Aqui a stack é Next.js/React porque o
+> objetivo é um site público otimizado para SEO — não é o software do produto.
+
+## Stack
+
+| Camada      | Tecnologia              |
+| ----------- | ----------------------- |
+| Framework   | Next.js 14 (App Router) |
+| Linguagem   | TypeScript              |
+| Estilo      | Tailwind CSS            |
+| Animações   | Framer Motion           |
+| Formulários | React Hook Form + Zod   |
+| Ícones      | react-icons             |
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando                | O que faz                                |
+| ---------------------- | ---------------------------------------- |
+| `npm run dev`          | Servidor de desenvolvimento              |
+| `npm run build`        | Build de produção                        |
+| `npm run start`        | Serve o build de produção                |
+| `npm run lint`         | ESLint                                   |
+| `npm run format`       | Formata o projeto com Prettier           |
+| `npm run format:check` | Verifica formatação sem alterar arquivos |
 
-## Learn More
+## Estrutura do projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/                  Rotas (App Router), layout raiz, SEO (sitemap, robots, OG image)
+components/
+  ui/                 Componentes base (Button, Card, Container, Input, Textarea, Icon)
+  layout/             Header, Footer
+  sections/           Seções da home (Hero, Produto, Módulos, Sobre, Contato)
+  animations/         Componentes de animação de scroll (FadeIn/SlideIn/Stagger)
+  forms/              ContactForm
+  providers/          MotionProvider (respeito global a prefers-reduced-motion)
+hooks/                Hooks compartilhados (useReducedMotion)
+lib/                  Utilitários (cn) e validações Zod
+public/images/        Assets estáticos (logo — placeholder até asset definitivo)
+docs/                 Documentação de componentes e design system
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Mais detalhes em [docs/COMPONENTS.md](docs/COMPONENTS.md) e [docs/DESIGN.md](docs/DESIGN.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Branding
 
-## Deploy on Vercel
+A logo atual (`public/images/logo.svg`, `logo-mark.svg`, `app/icon.svg`,
+`app/opengraph-image.tsx`) é um **placeholder** — um lettermark "S" em Navy
+(`#1a3a5c`). Quando o asset definitivo da marca for fornecido, substituir esses arquivos
+mantendo os mesmos nomes/caminhos (nenhum outro componente precisa mudar).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ainda não configurado. Domínio alvo: `sidero.app.br`.
