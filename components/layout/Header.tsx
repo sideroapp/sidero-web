@@ -33,7 +33,7 @@ export function Header() {
             aria-label="SIDERO — Página inicial"
           >
             <Image
-              src="/images/sidero-logo.png"
+              src="/images/sidero-logo-transparent.png"
               alt="SIDERO"
               width={1254}
               height={1254}
