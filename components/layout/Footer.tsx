@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
@@ -30,14 +31,17 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <Link href="/" aria-label="SIDERO — Página inicial">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/logo.svg"
+            <Link
+              href="/"
+              className="relative block h-6 w-[103px] overflow-hidden sm:h-7 sm:w-[120px]"
+              aria-label="SIDERO — Página inicial"
+            >
+              <Image
+                src="/images/sidero-logo.png"
                 alt="SIDERO"
-                width={170}
-                height={40}
-                className="h-10 w-auto"
+                width={1254}
+                height={1254}
+                className="absolute left-[-8.8%] top-[-181.1%] h-[499.9%] w-auto max-w-none"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-slate-500">
