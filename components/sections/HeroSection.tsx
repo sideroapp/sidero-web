@@ -85,7 +85,7 @@ export function HeroSection() {
           transition={{ duration: 0.2, delay: 0.5 }}
           className="relative px-4 py-6 sm:px-6 sm:py-8"
         >
-          <div className="relative aspect-[2.478/1] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+          <div className="relative aspect-[2.478/1] w-full overflow-hidden">
             <Image
               src="/images/sidero-logo.png"
               alt="SIDERO — ERP Industrial"
