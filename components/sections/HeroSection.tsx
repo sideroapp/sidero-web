@@ -58,7 +58,7 @@ export function HeroSection() {
               hidden: {},
               visible: { transition: { staggerChildren: 0.1, delayChildren: 0.4 } },
             }}
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
+            className="mt-8 flex flex-col flex-wrap gap-3 sm:flex-row"
           >
             <motion.div
               variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
