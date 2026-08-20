@@ -77,15 +77,15 @@ export function ProductionSection() {
       <div className="absolute inset-0 bg-navy-950/60" aria-hidden="true" />
 
       <Container className="relative flex h-full items-center justify-center">
-        <div className="max-w-2xl rounded-2xl bg-white/10 px-6 py-8 text-center backdrop-blur-sm sm:px-10 sm:py-10">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <div className="max-w-2xl rounded-2xl bg-white/10 px-4 py-6 text-center backdrop-blur-sm sm:px-10 sm:py-10">
+          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
             Nosso Processo de Produção
           </h2>
-          <p className="mt-4 text-lg text-white/90">
+          <p className="mt-3 text-base text-white/90 sm:mt-4 sm:text-lg">
             Transformação de bobinas em produtos de qualidade com controle rigoroso em cada etapa
           </p>
-          <div className="mt-8">
-            <Button href="#modulos" size="lg">
+          <div className="mt-6 sm:mt-8">
+            <Button href="#modulos" size="md" className="sm:h-12 sm:px-8 sm:text-lg">
               Conhecer os módulos
             </Button>
           </div>
