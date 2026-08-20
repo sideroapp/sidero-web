@@ -27,20 +27,19 @@ export function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <Link href="/" className="flex items-center gap-2.5" aria-label="SIDERO — Página inicial">
-            <span className="relative block h-9 w-9 shrink-0 overflow-hidden sm:h-10 sm:w-10 lg:h-11 lg:w-11">
-              <Image
-                src="/images/sidero-logo-web.png"
-                alt=""
-                width={1254}
-                height={1254}
-                priority
-                className="absolute left-[-30.4%] top-[-22.3%] h-[156.4%] w-auto max-w-none"
-              />
-            </span>
-            <span className="text-lg font-bold tracking-tight text-navy-950 sm:text-xl">
-              SIDERO
-            </span>
+          <Link
+            href="/"
+            className="relative block h-7 w-[120px] shrink-0 overflow-hidden sm:h-8 sm:w-[137px] lg:h-9 lg:w-[154px]"
+            aria-label="SIDERO — Página inicial"
+          >
+            <Image
+              src="/images/sidero-logo.png"
+              alt="SIDERO"
+              width={1254}
+              height={1254}
+              priority
+              className="absolute left-[-8.8%] top-[-181.1%] h-[499.9%] w-auto max-w-none"
+            />
           </Link>
         </motion.div>
 
