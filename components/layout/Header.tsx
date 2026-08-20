@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -26,14 +27,18 @@ export function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <Link href="/" className="flex items-center" aria-label="SIDERO — Página inicial">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/logo.svg"
-              alt="SIDERO"
-              width={255}
-              height={60}
-              className="h-[60px] w-auto"
+          <Link
+            href="/"
+            className="relative block h-10 w-20 overflow-hidden sm:h-12 sm:w-24 lg:h-14 lg:w-28"
+            aria-label="SIDERO — Página inicial"
+          >
+            <Image
+              src="/images/sidero.jpg"
+              alt="SIDERO — ERP Industrial"
+              width={1254}
+              height={1254}
+              priority
+              className="absolute left-1/2 top-[-32%] h-[227%] w-auto -translate-x-1/2"
             />
           </Link>
         </motion.div>

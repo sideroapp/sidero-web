@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -21,8 +20,8 @@ export function HeroSection() {
         />
       </div>
 
-      <Container className="grid grid-cols-1 items-center gap-10 py-20 md:grid-cols-2 md:gap-12 lg:gap-16 lg:py-28">
-        <div className="order-2 md:order-1">
+      <Container className="grid grid-cols-1 items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
+        <div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -83,20 +82,41 @@ export function HeroSection() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.2, delay: 0.5 }}
-          className="order-1 w-full md:order-2"
+          className="relative"
         >
-          <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-md sm:p-8">
-            <Image
-              src="/images/sidero.jpg"
-              alt="SIDERO — ERP Industrial"
-              fill
-              priority
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 40vw"
-              className="object-contain"
-            />
-          </div>
+          <HeroMockup />
         </motion.div>
       </Container>
     </section>
+  );
+}
+
+function HeroMockup() {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:p-6">
+      <div className="flex items-center gap-2 border-b border-slate-100 pb-4">
+        <span className="h-3 w-3 rounded-full bg-slate-200" />
+        <span className="h-3 w-3 rounded-full bg-slate-200" />
+        <span className="h-3 w-3 rounded-full bg-slate-200" />
+        <div className="ml-2 h-3 w-32 rounded bg-slate-100" />
+      </div>
+
+      <div className="mt-5 grid grid-cols-3 gap-3">
+        {['Estoque', 'Produção', 'Vendas'].map((label) => (
+          <div key={label} className="rounded-lg bg-slate-50 p-3">
+            <div className="text-xs font-medium text-slate-400">{label}</div>
+            <div className="mt-2 h-6 w-16 rounded bg-navy-800/90" />
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-4 space-y-2.5">
+        {[100, 80, 90, 65].map((width, index) => (
+          <div key={index} className="h-2.5 rounded-full bg-slate-100">
+            <div className="h-2.5 rounded-full bg-navy-200" style={{ width: `${width}%` }} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
