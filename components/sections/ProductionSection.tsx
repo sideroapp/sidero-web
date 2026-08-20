@@ -23,6 +23,22 @@ const SLIDES = [
     src: 'https://images.pexels.com/photos/9280923/pexels-photo-9280923.jpeg?auto=compress&cs=tinysrgb&w=1920',
     alt: 'Telhado de telhas de aço semi sanduíche em construção industrial',
   },
+  {
+    src: 'https://images.pexels.com/photos/31352672/pexels-photo-31352672.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    alt: 'Máquinas de formação industrial em linha de produção',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1645754884968-a00b7ed62c43?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Linha de produção em ação durante processo de fabricação',
+  },
+  {
+    src: 'https://images.pexels.com/photos/29454379/pexels-photo-29454379.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    alt: 'Produtos empacotados armazenados em estoque industrial',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1765808376624-aba74b96859f?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Instalação de telha de aço em telhado real',
+  },
 ];
 
 const SLIDE_DURATION = 5000;
